@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/newsCategoriesFragment"
+        android:name="com.musnadil.newsapp.ui.newscategories.NewsCategoriesFragment"
+        android:label="fragment_news_categories"
+        tools:layout="@layout/fragment_news_categories" >
+        <action
+            android:id="@+id/action_newsCategoriesFragment_to_newsSourcesFragment"
+            app:destination="@id/newsSourcesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/right_slide_in"
+            app:popExitAnim="@anim/right_slide_out"/>
+        <action
+            android:id="@+id/action_newsCategoriesFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/fly_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/exit_fly_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newsSourcesFragment"
+        android:name="com.musnadil.newsapp.ui.newssources.NewsSourcesFragment"
+        android:label="fragment_news_sources"
+        tools:layout="@layout/fragment_news_sources" >
+        <action
+            android:id="@+id/action_newsSourcesFragment_to_newsArticlesFragment"
+            app:destination="@id/newsArticlesFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@anim/right_slide_in"
+            app:popExitAnim="@anim/right_slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.musnadil.newsapp.ui.splashscreen.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_newsCategoriesFragment"
+            app:destination="@id/newsCategoriesFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsArticlesFragment"
+        android:name="com.musnadil.newsapp.ui.newsarticles.NewsArticlesFragment"
+        android:label="fragment_news_articles"
+        tools:layout="@layout/fragment_news_articles" >
+        <action
+            android:id="@+id/action_newsArticlesFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment"
+            app:enterAnim="@anim/fly_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/exit_fly_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailArticleFragment"
+        android:name="com.musnadil.newsapp.ui.detailarticle.DetailArticleFragment"
+        android:label="fragment_detail_article"
+        tools:layout="@layout/fragment_detail_article" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.musnadil.newsapp.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailArticleFragment"
+            app:destination="@id/detailArticleFragment"
+            app:enterAnim="@anim/fly_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/exit_fly_out"/>
+    </fragment>
+</navigation>
