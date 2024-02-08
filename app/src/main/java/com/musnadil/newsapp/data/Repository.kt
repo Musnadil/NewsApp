@@ -9,6 +9,6 @@ class Repository(private val apiHelper: ApiHelper) {
     suspend fun getArticles(source: String, apiKey: String) =
         apiHelper.getArticles(source, apiKey)
 
-    suspend fun searchArticle(q: String, apiKey: String) =
-        apiHelper.searchArticle(q, apiKey)
+    suspend fun searchArticle(q: String, apiKey: String, page: Int) =
+        apiHelper.searchArticle(q, apiKey, page)
 }

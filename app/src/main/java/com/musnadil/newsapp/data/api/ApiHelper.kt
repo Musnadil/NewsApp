@@ -7,7 +7,7 @@ class ApiHelper(private val apiServices: ApiServices) {
     suspend fun getArticles(source: String, apiKey: String) =
         apiServices.getArticles(source, apiKey)
 
-    suspend fun searchArticle(q: String, apiKey: String) =
-        apiServices.searchArticle(q, apiKey)
+    suspend fun searchArticle(q: String, apiKey: String, page: Int) =
+        apiServices.searchArticle(q, apiKey, page)
 
 }

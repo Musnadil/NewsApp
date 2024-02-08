@@ -20,6 +20,7 @@ import com.musnadil.newsapp.data.model.Source
 import com.musnadil.newsapp.databinding.FragmentNewsSourcesBinding
 import com.musnadil.newsapp.ui.newscategories.NewsCategoriesFragment.Companion.CATEGORY_KEY
 import com.musnadil.newsapp.utility.getApiKey
+import com.musnadil.newsapp.utility.showViewSmoothly
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -95,7 +96,7 @@ class NewsSourcesFragment : Fragment() {
                     if (listSource.size > 0) {
                         Handler(Looper.getMainLooper()).postDelayed({
                             progressDialog.dismiss()
-                            binding.rvSource.visibility = View.VISIBLE
+                            showViewSmoothly(binding.rvSource)
                             newsSourcesAdapter.submitData(listSource)
                         }, 500)
                     } else {

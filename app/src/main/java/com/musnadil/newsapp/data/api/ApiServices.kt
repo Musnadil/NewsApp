@@ -3,6 +3,7 @@ package com.musnadil.newsapp.data.api
 import com.musnadil.newsapp.data.model.ResponseArticlesFromSource
 import com.musnadil.newsapp.data.model.ResponseNewsSourcesByCategory
 import com.musnadil.newsapp.data.model.ResponseSearch
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -22,8 +23,9 @@ interface ApiServices {
     @GET("everything")
     suspend fun searchArticle(
         @Query("q") q: String,
-        @Query("apiKey") apiKey: String
-    ) : ResponseSearch
+        @Query("apiKey") apiKey: String,
+        @Query("page") page: Int
+    ) : Response<ResponseSearch>
 
 
 }
