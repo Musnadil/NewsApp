@@ -72,8 +72,8 @@ class SearchFragment : Fragment() {
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 hideKeyboard()
                 binding.etSearch.clearFocus()
-                binding.progressBar.visibility = View.VISIBLE
                 if (!binding.etSearch.text.isNullOrEmpty()) {
+                    binding.progressBar.visibility = View.VISIBLE
                     getArticle(binding.etSearch.text.toString())
                 } else {
                     Toast.makeText(
