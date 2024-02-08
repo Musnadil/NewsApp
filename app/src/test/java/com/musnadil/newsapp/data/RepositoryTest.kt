@@ -13,6 +13,7 @@ import org.junit.Assert.*
 
 import org.junit.Before
 import org.junit.Test
+import retrofit2.Response
 
 class RepositoryTest {
     private lateinit var apiHelper: ApiHelper
@@ -66,18 +67,18 @@ class RepositoryTest {
 
     @Test
     fun searchArticle() : Unit = runBlocking {
-        val responseSearch = mockk<ResponseSearch>()
+        val responseSearch = mockk<Response<ResponseSearch>>()
         every {
             runBlocking {
-                repository.searchArticle("","")
+                repository.searchArticle("","",1)
             }
         } returns responseSearch
 
-        repository.searchArticle("","")
+        repository.searchArticle("","",1)
 
         verify {
             runBlocking {
-                repository.searchArticle("","")
+                repository.searchArticle("","",1)
             }
         }
     }
