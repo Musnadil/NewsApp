@@ -10,6 +10,8 @@ This Android news application was developed using Android Studio, using Kotlin a
 - Search Article
 - Read Article
 
+## Application
+[Download App](https://drive.google.com/file/d/1Zrw7kkvZiC20cOTHRtVPYDPkGl5ZO6ab/view?usp=sharing)
 
 ## Tech Stack
 
