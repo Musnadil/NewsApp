@@ -27,3 +27,8 @@ This Android news application was developed using Android Studio, using Kotlin a
 
 ## Demo
 [Demo App](https://firebasestorage.googleapis.com/v0/b/enews-2849d.appspot.com/o/demo.mp4?alt=media)
+
+## Testing
+The application's unit testing process has been successfully completed using the JUnit 4 library. In this phase, the testing focus was on the repository class directly associated with the viewmodel. This repository class acts as an intermediary for accessing data from the API, and through unit testing, its entire functionality has been successfully verified and thoroughly tested.
+![Screenshot 2024-02-09 003450](https://github.com/Musnadil/NewsApp/assets/57804197/bc4225b5-def5-46b8-83fb-1dc479468451)
+
